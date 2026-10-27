@@ -59,7 +59,7 @@ The short answer is that the published numbers come from an easy test setup, and
 | `results/SWEEP.md` | Mean ± std over seeds and training budgets |
 | `results/checkpoints/*.pt` | Trained neural-network weights (all under 100 KB) |
 | `research/lightweight-ciciot2023-models-and-datasets.md` | Literature survey: models, datasets, generalisation studies |
-| `research/literature_review.xlsx` | Literature review workbook (20 papers, one row each) |
+| `research/literature_review.xlsx` | Literature review workbook (24 papers and datasets, one row each) |
 
 The datasets and the tree-model pickles are not committed (several GB). See Setup.
 
@@ -187,16 +187,16 @@ Other limits worth knowing:
 
 - Cross-dataset tests are binary only, because the two datasets' attack taxonomies differ.
 - The E1/E4/E5 tables are single-seed (42); only the headline claims were swept.
-- The models are our faithful re-implementations, not the authors' code. Our 8-class numbers for the neural models are far below those papers' claims; we document our choices in `src/models.py` so this can be checked.
+- The models are our re-implementations from the papers' descriptions, not the authors' code. Where a paper gives no layer widths we chose our own: the DL-BiLSTM paper reports 1,988 parameters on CICIoT2023 (and evaluates only its Recon and Mirai classes), while our version has 11,432 and is evaluated on all eight classes. Our 8-class numbers for the neural models are far below the papers' claims; the choices are documented in `src/models.py` so this can be checked.
 - `lgbm_iso.py` exists because LightGBM segfaults in-process after PyTorch has used the Apple GPU. It is a workaround, not a feature.
 
 ## References
 
 1. E. C. P. Neto, S. Dadkhah, R. Ferreira, A. Zohourian, R. Lu, A. A. Ghorbani, "CICIoT2023: A Real-Time Dataset and Benchmark for Large-Scale Attacks in IoT Environment," *Sensors* 23(13):5941, 2023.
 2. S. Dadkhah, E. C. P. Neto, R. Ferreira, R. C. Molokwu, S. Sadeghi, A. A. Ghorbani, "CICIoMT2024: A benchmark dataset for multi-protocol security assessment in IoMT," *Internet of Things*, 2024.
-3. "Lightweight MLP-Based Feature Extraction with Linear Classifier for Intrusion Detection System in Internet of Things," *Electronics* 15(8):1604, 2026. (MLP14k)
-4. "Lightweight intrusion detection model based on CNN and knowledge distillation," *Applied Soft Computing*, 2024. (KD student CNN)
-5. "A lightweight intrusion detection method for IoT based on deep learning and dynamic quantization," *PeerJ Computer Science*, 2023. (DL-BiLSTM)
+3. J. Chandroth, J. Ali, "Lightweight MLP-Based Feature Extraction with Linear Classifier for Intrusion Detection System in Internet of Things," *Electronics* 15(8):1604, 2026. (MLP14k)
+4. L.-H. Wang, Q. Dai, T. Du, L.-F. Chen, "Lightweight intrusion detection model based on CNN and knowledge distillation," *Applied Soft Computing*, 2024, doi:10.1016/j.asoc.2024.112118. (KD student CNN)
+5. Z. Wang, H. Chen, S. Yang, X. Luo, D. Li, J. Wang, "A lightweight intrusion detection method for IoT based on deep learning and dynamic quantization," *PeerJ Computer Science* 9:e1569, 2023. (DL-BiLSTM)
 6. F. Keskin, *reliable-edge-iot-ids* research artifact, GitHub, 2026. (TinyMLP)
 7. M. Cantone, C. Marrocco, A. Bria, "On the Cross-Dataset Generalization of Machine Learning for Network Intrusion Detection," arXiv:2402.10974, 2024.
 8. M. Sarhan, S. Layeghy, M. Portmann, "Towards a Standard Feature Set for Network Intrusion Detection System Datasets," *Mobile Networks and Applications*, 2022.
