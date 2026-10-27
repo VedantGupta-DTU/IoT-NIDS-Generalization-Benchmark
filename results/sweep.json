@@ -1,0 +1,2169 @@
+{
+  "meta": {
+    "seeds": [
+      13,
+      21,
+      42
+    ],
+    "epoch_arms": [
+      4,
+      10
+    ],
+    "teacher_epochs": 3,
+    "n_train": 1529980,
+    "n_test": 382032,
+    "external": {
+      "rows": 8718012,
+      "attack_ratio": 0.9736,
+      "missing_features": [
+        "flow_duration",
+        "urg_count"
+      ],
+      "per_file_cap": 200000
+    }
+  },
+  "runs": {
+    "MLP14k|binary|s13|e4": {
+      "model": "MLP14k",
+      "task": "binary",
+      "seed": 13,
+      "epochs": 4,
+      "params": 14018,
+      "train_seconds": 32.6,
+      "timestamp": "2026-10-27 00:59:45",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.9028589228127487,
+          "precision_macro": 0.8119058270099799,
+          "recall_macro": 0.9238422156253902,
+          "f1_macro": 0.8503511092593963,
+          "f1_weighted": 0.9101709656263627,
+          "mcc": 0.7271832142902628,
+          "fpr": 0.04506375579598145,
+          "detection_rate": 0.8927481870467617,
+          "confusion_matrix": [
+            [
+              59313,
+              2799
+            ],
+            [
+              34312,
+              285608
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9739450920691552,
+          "precision_macro": 0.7485491352167639,
+          "recall_macro": 0.5939859522556259,
+          "f1_macro": 0.6339323547727451,
+          "f1_weighted": 0.968089425580574,
+          "mcc": 0.3056804027454811,
+          "fpr": 0.807171169450245,
+          "detection_rate": 0.9951430739614968,
+          "confusion_matrix": [
+            [
+              44416,
+              185923
+            ],
+            [
+              41224,
+              8446449
+            ]
+          ]
+        }
+      }
+    },
+    "KDStudentCNN|binary|s13|e4": {
+      "model": "KDStudentCNN",
+      "task": "binary",
+      "seed": 13,
+      "epochs": 4,
+      "params": 1574,
+      "train_seconds": 50.2,
+      "timestamp": "2026-10-27 01:01:20",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.8509391883402437,
+          "precision_macro": 0.7482542983658687,
+          "recall_macro": 0.8593754142747434,
+          "f1_macro": 0.7801522926272013,
+          "f1_weighted": 0.8643371638317886,
+          "mcc": 0.5973825953966847,
+          "fpr": 0.128123390005152,
+          "detection_rate": 0.8468742185546386,
+          "confusion_matrix": [
+            [
+              54154,
+              7958
+            ],
+            [
+              48988,
+              270932
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9750976484088345,
+          "precision_macro": 0.861298094133401,
+          "recall_macro": 0.54308362517807,
+          "f1_macro": 0.5715773370594504,
+          "f1_weighted": 0.9653914787130663,
+          "mcc": 0.24952780738983377,
+          "fpr": 0.9130325303140154,
+          "detection_rate": 0.9991997806701554,
+          "confusion_matrix": [
+            [
+              20032,
+              210307
+            ],
+            [
+              6792,
+              8480881
+            ]
+          ]
+        }
+      }
+    },
+    "DLBiLSTM|binary|s13|e4": {
+      "model": "DLBiLSTM",
+      "task": "binary",
+      "seed": 13,
+      "epochs": 4,
+      "params": 11138,
+      "train_seconds": 71.2,
+      "timestamp": "2026-10-27 01:02:40",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.904424236713155,
+          "precision_macro": 0.8138375137609453,
+          "recall_macro": 0.9208910612506295,
+          "f1_macro": 0.8514832083452152,
+          "f1_weighted": 0.9113216966743549,
+          "mcc": 0.7268876233011629,
+          "fpr": 0.054707624935600205,
+          "detection_rate": 0.8964897474368592,
+          "confusion_matrix": [
+            [
+              58714,
+              3398
+            ],
+            [
+              33115,
+              286805
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9917650950698393,
+          "precision_macro": 0.9183721721955361,
+          "recall_macro": 0.9223328015272696,
+          "f1_macro": 0.9203425686573619,
+          "f1_weighted": 0.9917844927100129,
+          "mcc": 0.8406956442480003,
+          "fpr": 0.1509731309070544,
+          "detection_rate": 0.9956387339615935,
+          "confusion_matrix": [
+            [
+              195564,
+              34775
+            ],
+            [
+              37017,
+              8450656
+            ]
+          ]
+        }
+      }
+    },
+    "TinyMLP|binary|s13|e4": {
+      "model": "TinyMLP",
+      "task": "binary",
+      "seed": 13,
+      "epochs": 4,
+      "params": 7298,
+      "train_seconds": 33.6,
+      "timestamp": "2026-10-27 01:03:26",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.9072407547011768,
+          "precision_macro": 0.8176511601470917,
+          "recall_macro": 0.9227543700067211,
+          "f1_macro": 0.8551405874825035,
+          "f1_weighted": 0.9137664933111707,
+          "mcc": 0.7329076779237281,
+          "fpr": 0.05425682637815559,
+          "detection_rate": 0.8997655663915979,
+          "confusion_matrix": [
+            [
+              58742,
+              3370
+            ],
+            [
+              32067,
+              287853
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.975097877818934,
+          "precision_macro": 0.7894560381336899,
+          "recall_macro": 0.583995734269712,
+          "f1_macro": 0.6268338314694499,
+          "f1_weighted": 0.9682844012378357,
+          "mcc": 0.31185299396889565,
+          "fpr": 0.8289260611533436,
+          "detection_rate": 0.9969175296927674,
+          "confusion_matrix": [
+            [
+              39405,
+              190934
+            ],
+            [
+              26163,
+              8461510
+            ]
+          ]
+        }
+      }
+    },
+    "MLP14k|binary|s13|e10": {
+      "model": "MLP14k",
+      "task": "binary",
+      "seed": 13,
+      "epochs": 10,
+      "params": 14018,
+      "train_seconds": 84.8,
+      "timestamp": "2026-10-27 01:04:58",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.9049241948318465,
+          "precision_macro": 0.814746656968931,
+          "recall_macro": 0.9289740735995435,
+          "f1_macro": 0.8538208734761598,
+          "f1_weighted": 0.9121471016486874,
+          "mcc": 0.7348963344358183,
+          "fpr": 0.03538768675940237,
+          "detection_rate": 0.8933358339584896,
+          "confusion_matrix": [
+            [
+              59914,
+              2198
+            ],
+            [
+              34124,
+              285796
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9725795284521288,
+          "precision_macro": 0.6702193671647649,
+          "recall_macro": 0.5245116111940858,
+          "f1_macro": 0.5381395599985329,
+          "f1_weighted": 0.9624098866911247,
+          "mcc": 0.1291874753317218,
+          "fpr": 0.9485540876707809,
+          "detection_rate": 0.9975773100589526,
+          "confusion_matrix": [
+            [
+              11850,
+              218489
+            ],
+            [
+              20563,
+              8467110
+            ]
+          ]
+        }
+      }
+    },
+    "KDStudentCNN|binary|s13|e10": {
+      "model": "KDStudentCNN",
+      "task": "binary",
+      "seed": 13,
+      "epochs": 10,
+      "params": 1574,
+      "train_seconds": 121.3,
+      "timestamp": "2026-10-27 01:07:07",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.8505701093102148,
+          "precision_macro": 0.7510790278221432,
+          "recall_macro": 0.8730309183265678,
+          "f1_macro": 0.7837520499019381,
+          "f1_weighted": 0.8648704873589284,
+          "mcc": 0.6120792116092032,
+          "fpr": 0.09368560020607934,
+          "detection_rate": 0.8397474368592148,
+          "confusion_matrix": [
+            [
+              56293,
+              5819
+            ],
+            [
+              51268,
+              268652
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9754415341479227,
+          "precision_macro": 0.8670454174144147,
+          "recall_macro": 0.551348446011786,
+          "f1_macro": 0.5849039935023251,
+          "f1_weighted": 0.96625777773738,
+          "mcc": 0.27457029555272405,
+          "fpr": 0.8964048641350357,
+          "detection_rate": 0.9991017561586079,
+          "confusion_matrix": [
+            [
+              23862,
+              206477
+            ],
+            [
+              7624,
+              8480049
+            ]
+          ]
+        }
+      }
+    },
+    "DLBiLSTM|binary|s13|e10": {
+      "model": "DLBiLSTM",
+      "task": "binary",
+      "seed": 13,
+      "epochs": 10,
+      "params": 11138,
+      "train_seconds": 156.4,
+      "timestamp": "2026-10-27 01:09:52",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.9016522176152783,
+          "precision_macro": 0.8104725947116695,
+          "recall_macro": 0.9255933018223643,
+          "f1_macro": 0.849369828206512,
+          "f1_weighted": 0.9092565233471569,
+          "mcc": 0.7270077213034156,
+          "fpr": 0.03892967542503864,
+          "detection_rate": 0.8901162790697674,
+          "confusion_matrix": [
+            [
+              59694,
+              2418
+            ],
+            [
+              35154,
+              284766
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9720811350110553,
+          "precision_macro": 0.6664337729180893,
+          "recall_macro": 0.5338347976004422,
+          "f1_macro": 0.5522411872536614,
+          "f1_weighted": 0.9629049102316121,
+          "mcc": 0.15008335044982854,
+          "fpr": 0.928861373888052,
+          "detection_rate": 0.9965309690889363,
+          "confusion_matrix": [
+            [
+              16386,
+              213953
+            ],
+            [
+              29444,
+              8458229
+            ]
+          ]
+        }
+      }
+    },
+    "TinyMLP|binary|s13|e10": {
+      "model": "TinyMLP",
+      "task": "binary",
+      "seed": 13,
+      "epochs": 10,
+      "params": 7298,
+      "train_seconds": 79.3,
+      "timestamp": "2026-10-27 01:11:24",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.9018642417389119,
+          "precision_macro": 0.8107866497348748,
+          "recall_macro": 0.9265437555776116,
+          "f1_macro": 0.8498172528927925,
+          "f1_weighted": 0.9094801686925087,
+          "mcc": 0.7281870769556328,
+          "fpr": 0.0368849819680577,
+          "detection_rate": 0.8899724931232809,
+          "confusion_matrix": [
+            [
+              59821,
+              2291
+            ],
+            [
+              35200,
+              284720
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9745065732875798,
+          "precision_macro": 0.834987937327712,
+          "recall_macro": 0.5309328432751865,
+          "f1_macro": 0.5509697193055995,
+          "f1_weighted": 0.9640227441187005,
+          "mcc": 0.20358908973160753,
+          "fpr": 0.9373879369103799,
+          "detection_rate": 0.999253623460753,
+          "confusion_matrix": [
+            [
+              14422,
+              215917
+            ],
+            [
+              6335,
+              8481338
+            ]
+          ]
+        }
+      }
+    },
+    "RandomForest|binary|s13|e-": {
+      "model": "RandomForest",
+      "task": "binary",
+      "seed": 13,
+      "epochs": null,
+      "params": null,
+      "train_seconds": 32.6,
+      "timestamp": "2026-10-27 01:12:04",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.9579851949574905,
+          "precision_macro": 0.9009252297772898,
+          "recall_macro": 0.9647487811384841,
+          "f1_macro": 0.928678524093806,
+          "f1_weighted": 0.9595310021433251,
+          "mcc": 0.8633180453729948,
+          "fpr": 0.02522861926841834,
+          "detection_rate": 0.9547261815453864,
+          "confusion_matrix": [
+            [
+              60545,
+              1567
+            ],
+            [
+              14484,
+              305436
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.973602926905813,
+          "precision_macro": 0.8370975300417329,
+          "recall_macro": 0.5007831206661845,
+          "f1_macro": 0.49489322710826494,
+          "f1_weighted": 0.9606402621876515,
+          "mcc": 0.032495417664366075,
+          "fpr": 0.9984153790717161,
+          "detection_rate": 0.9999816204040849,
+          "confusion_matrix": [
+            [
+              365,
+              229974
+            ],
+            [
+              156,
+              8487517
+            ]
+          ]
+        }
+      }
+    },
+    "LightGBM|binary|s13|e-": {
+      "model": "LightGBM",
+      "task": "binary",
+      "seed": 13,
+      "epochs": null,
+      "params": null,
+      "train_seconds": 9.7,
+      "timestamp": "2026-10-27 01:12:23",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.9580872806466474,
+          "precision_macro": 0.9001284769261186,
+          "recall_macro": 0.9674888993693556,
+          "f1_macro": 0.929168863501957,
+          "f1_weighted": 0.9597107607557437,
+          "mcc": 0.8649985463213861,
+          "fpr": 0.018579340546110254,
+          "detection_rate": 0.9535571392848212,
+          "confusion_matrix": [
+            [
+              60958,
+              1154
+            ],
+            [
+              14858,
+              305062
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9739622978266146,
+          "precision_macro": 0.8726419592259922,
+          "recall_macro": 0.5102321693936627,
+          "f1_macro": 0.5134940052909508,
+          "f1_weighted": 0.9617915418828014,
+          "mcc": 0.12349794573168725,
+          "fpr": 0.9793695379419031,
+          "detection_rate": 0.9998338767292284,
+          "confusion_matrix": [
+            [
+              4752,
+              225587
+            ],
+            [
+              1410,
+              8486263
+            ]
+          ]
+        }
+      }
+    },
+    "MLP14k|8class|s13|e4": {
+      "model": "MLP14k",
+      "task": "8class",
+      "seed": 13,
+      "epochs": 4,
+      "params": 14336,
+      "train_seconds": 34.1,
+      "timestamp": "2026-10-27 01:13:22",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.7535180299032542,
+          "precision_macro": 0.6751518218738407,
+          "recall_macro": 0.7373033549576213,
+          "f1_macro": 0.641385459746765,
+          "f1_weighted": 0.7866823482239452,
+          "mcc": 0.719073789080152,
+          "fpr_macro": 0.0338650595294378,
+          "confusion_matrix": [
+            [
+              47672,
+              6505,
+              0,
+              0,
+              0,
+              1288,
+              3138,
+              3509
+            ],
+            [
+              169,
+              1937,
+              0,
+              0,
+              0,
+              85,
+              42,
+              437
+            ],
+            [
+              0,
+              0,
+              47300,
+              15071,
+              14,
+              108,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              9853,
+              52376,
+              28,
+              184,
+              8,
+              1
+            ],
+            [
+              3,
+              0,
+              21,
+              37,
+              62161,
+              214,
+              25,
+              39
+            ],
+            [
+              6447,
+              12097,
+              5,
+              38,
+              9,
+              33618,
+              1086,
+              9156
+            ],
+            [
+              6052,
+              7968,
+              2,
+              0,
+              1,
+              1082,
+              39644,
+              7673
+            ],
+            [
+              121,
+              1321,
+              0,
+              0,
+              0,
+              120,
+              200,
+              3160
+            ]
+          ]
+        }
+      }
+    },
+    "MLP14k|8class|s13|e10": {
+      "model": "MLP14k",
+      "task": "8class",
+      "seed": 13,
+      "epochs": 10,
+      "params": 14336,
+      "train_seconds": 83.7,
+      "timestamp": "2026-10-27 01:14:46",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.7732755371277799,
+          "precision_macro": 0.6848718215255724,
+          "recall_macro": 0.7568066097045338,
+          "f1_macro": 0.6596270389730619,
+          "f1_weighted": 0.8005253566910644,
+          "mcc": 0.7409099047601855,
+          "fpr_macro": 0.03133764600730089,
+          "confusion_matrix": [
+            [
+              50864,
+              1883,
+              0,
+              0,
+              0,
+              1432,
+              2555,
+              5378
+            ],
+            [
+              214,
+              1565,
+              0,
+              0,
+              0,
+              120,
+              29,
+              742
+            ],
+            [
+              0,
+              0,
+              46989,
+              15387,
+              34,
+              87,
+              3,
+              0
+            ],
+            [
+              0,
+              1,
+              8506,
+              53734,
+              50,
+              154,
+              4,
+              1
+            ],
+            [
+              1,
+              0,
+              19,
+              21,
+              62281,
+              160,
+              16,
+              2
+            ],
+            [
+              6303,
+              5825,
+              10,
+              29,
+              36,
+              36267,
+              898,
+              13088
+            ],
+            [
+              6796,
+              3730,
+              4,
+              0,
+              1,
+              1211,
+              39657,
+              11023
+            ],
+            [
+              146,
+              435,
+              0,
+              0,
+              0,
+              132,
+              150,
+              4059
+            ]
+          ]
+        }
+      }
+    },
+    "MLP14k|binary|s21|e4": {
+      "model": "MLP14k",
+      "task": "binary",
+      "seed": 21,
+      "epochs": 4,
+      "params": 14018,
+      "train_seconds": 33.2,
+      "timestamp": "2026-10-27 01:15:20",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.9014768396364703,
+          "precision_macro": 0.8101423865865597,
+          "recall_macro": 0.9234516439194806,
+          "f1_macro": 0.8486997575720615,
+          "f1_weighted": 0.9090027893664403,
+          "mcc": 0.7247904619935055,
+          "fpr": 0.043985059247810404,
+          "detection_rate": 0.8908883470867717,
+          "confusion_matrix": [
+            [
+              59380,
+              2732
+            ],
+            [
+              34907,
+              285013
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9804562095119851,
+          "precision_macro": 0.9253223035155351,
+          "recall_macro": 0.6525894525248768,
+          "f1_macro": 0.7215802136905782,
+          "f1_weighted": 0.9758638002691381,
+          "mcc": 0.5095083804612245,
+          "fpr": 0.6935690438874875,
+          "detection_rate": 0.9987479489372411,
+          "confusion_matrix": [
+            [
+              70583,
+              159756
+            ],
+            [
+              10627,
+              8477046
+            ]
+          ]
+        }
+      }
+    },
+    "KDStudentCNN|binary|s21|e4": {
+      "model": "KDStudentCNN",
+      "task": "binary",
+      "seed": 21,
+      "epochs": 4,
+      "params": 1574,
+      "train_seconds": 46.7,
+      "timestamp": "2026-10-27 01:16:49",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.8553053147380324,
+          "precision_macro": 0.7522780473429929,
+          "recall_macro": 0.8601659326153022,
+          "f1_macro": 0.7844771804136248,
+          "f1_weighted": 0.8678541639387651,
+          "mcc": 0.6028663473761209,
+          "fpr": 0.13263137557959814,
+          "detection_rate": 0.8529632408102026,
+          "confusion_matrix": [
+            [
+              53874,
+              8238
+            ],
+            [
+              47040,
+              272880
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9752487149593279,
+          "precision_macro": 0.8486110443514892,
+          "recall_macro": 0.5510023389051197,
+          "f1_macro": 0.5839092072944394,
+          "f1_weighted": 0.9661115011774616,
+          "mcc": 0.26668317254811835,
+          "fpr": 0.8969128111175267,
+          "detection_rate": 0.9989174889277662,
+          "confusion_matrix": [
+            [
+              23745,
+              206594
+            ],
+            [
+              9188,
+              8478485
+            ]
+          ]
+        }
+      }
+    },
+    "DLBiLSTM|binary|s21|e4": {
+      "model": "DLBiLSTM",
+      "task": "binary",
+      "seed": 21,
+      "epochs": 4,
+      "params": 11138,
+      "train_seconds": 64.1,
+      "timestamp": "2026-10-27 01:18:02",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.8868890564141224,
+          "precision_macro": 0.7931296292395061,
+          "recall_macro": 0.919950781986455,
+          "f1_macro": 0.8319353679459923,
+          "f1_weighted": 0.8967888406065601,
+          "mcc": 0.7017122402310799,
+          "fpr": 0.031056800618238022,
+          "detection_rate": 0.8709583645911478,
+          "confusion_matrix": [
+            [
+              60183,
+              1929
+            ],
+            [
+              41283,
+              278637
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9911661053001533,
+          "precision_macro": 0.9057821128659224,
+          "recall_macro": 0.927617237615932,
+          "f1_macro": 0.9163950546395714,
+          "f1_weighted": 0.9912818273018515,
+          "mcc": 0.8331132604338549,
+          "fpr": 0.1394770316793943,
+          "detection_rate": 0.9947115069112582,
+          "confusion_matrix": [
+            [
+              198212,
+              32127
+            ],
+            [
+              44887,
+              8442786
+            ]
+          ]
+        }
+      }
+    },
+    "TinyMLP|binary|s21|e4": {
+      "model": "TinyMLP",
+      "task": "binary",
+      "seed": 21,
+      "epochs": 4,
+      "params": 7298,
+      "train_seconds": 31.9,
+      "timestamp": "2026-10-27 01:18:46",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.9048849311052477,
+          "precision_macro": 0.8145046211348428,
+          "recall_macro": 0.923164151741181,
+          "f1_macro": 0.8525139733625993,
+          "f1_weighted": 0.9118225284478689,
+          "mcc": 0.7296220424883209,
+          "fpr": 0.04974884080370943,
+          "detection_rate": 0.8960771442860715,
+          "confusion_matrix": [
+            [
+              59022,
+              3090
+            ],
+            [
+              33247,
+              286673
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9767204954524036,
+          "precision_macro": 0.8657035529379727,
+          "recall_macro": 0.5876187543640691,
+          "f1_macro": 0.6372818286109024,
+          "f1_weighted": 0.9696257213174533,
+          "mcc": 0.35800832266828414,
+          "fpr": 0.8231910358211159,
+          "detection_rate": 0.998428544549254,
+          "confusion_matrix": [
+            [
+              40726,
+              189613
+            ],
+            [
+              13338,
+              8474335
+            ]
+          ]
+        }
+      }
+    },
+    "MLP14k|binary|s21|e10": {
+      "model": "MLP14k",
+      "task": "binary",
+      "seed": 21,
+      "epochs": 10,
+      "params": 14018,
+      "train_seconds": 80.3,
+      "timestamp": "2026-10-27 01:20:14",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.9124549775935,
+          "precision_macro": 0.8248972832356624,
+          "recall_macro": 0.9281835371420135,
+          "f1_macro": 0.8624189877476964,
+          "f1_weighted": 0.9184098487270267,
+          "mcc": 0.7459642563653476,
+          "fpr": 0.048509144770736735,
+          "detection_rate": 0.9048762190547637,
+          "confusion_matrix": [
+            [
+              59099,
+              3013
+            ],
+            [
+              30432,
+              289488
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9742707397053365,
+          "precision_macro": 0.8273320309107792,
+          "recall_macro": 0.5244298528313944,
+          "f1_macro": 0.539608888255925,
+          "f1_weighted": 0.9633119646307928,
+          "mcc": 0.17884824116721762,
+          "fpr": 0.950507729911131,
+          "detection_rate": 0.9993674355739199,
+          "confusion_matrix": [
+            [
+              11400,
+              218939
+            ],
+            [
+              5369,
+              8482304
+            ]
+          ]
+        }
+      }
+    },
+    "KDStudentCNN|binary|s21|e10": {
+      "model": "KDStudentCNN",
+      "task": "binary",
+      "seed": 21,
+      "epochs": 10,
+      "params": 1574,
+      "train_seconds": 115.8,
+      "timestamp": "2026-10-27 01:22:17",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.8285012773799053,
+          "precision_macro": 0.7372488908509164,
+          "recall_macro": 0.8781737104967896,
+          "f1_macro": 0.7652710004190137,
+          "f1_weighted": 0.8474843917985454,
+          "mcc": 0.5990702575302462,
+          "fpr": 0.04821934569809377,
+          "detection_rate": 0.8045667666916729,
+          "confusion_matrix": [
+            [
+              59117,
+              2995
+            ],
+            [
+              62523,
+              257397
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9757425201984122,
+          "precision_macro": 0.8627275811154473,
+          "recall_macro": 0.561065274532096,
+          "f1_macro": 0.5996722188070126,
+          "f1_weighted": 0.9671785058022511,
+          "mcc": 0.297657919909267,
+          "fpr": 0.876746881769913,
+          "detection_rate": 0.998877430834105,
+          "confusion_matrix": [
+            [
+              28390,
+              201949
+            ],
+            [
+              9528,
+              8478145
+            ]
+          ]
+        }
+      }
+    },
+    "DLBiLSTM|binary|s21|e10": {
+      "model": "DLBiLSTM",
+      "task": "binary",
+      "seed": 21,
+      "epochs": 10,
+      "params": 11138,
+      "train_seconds": 155.7,
+      "timestamp": "2026-10-27 01:25:01",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.9103190308665242,
+          "precision_macro": 0.8219198410232429,
+          "recall_macro": 0.924404204074589,
+          "f1_macro": 0.8590930079908714,
+          "f1_weighted": 0.9164264795466955,
+          "mcc": 0.7392540399762116,
+          "fpr": 0.05472372488408037,
+          "detection_rate": 0.9035321330332583,
+          "confusion_matrix": [
+            [
+              58713,
+              3399
+            ],
+            [
+              30862,
+              289058
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9736113003744432,
+          "precision_macro": 0.7398351872587523,
+          "recall_macro": 0.5824128939317181,
+          "f1_macro": 0.6199253122458681,
+          "f1_weighted": 0.967194131429506,
+          "mcc": 0.28117974214832264,
+          "fpr": 0.8306105349072455,
+          "detection_rate": 0.9954363227706817,
+          "confusion_matrix": [
+            [
+              39017,
+              191322
+            ],
+            [
+              38735,
+              8448938
+            ]
+          ]
+        }
+      }
+    },
+    "TinyMLP|binary|s21|e10": {
+      "model": "TinyMLP",
+      "task": "binary",
+      "seed": 21,
+      "epochs": 10,
+      "params": 7298,
+      "train_seconds": 80.1,
+      "timestamp": "2026-10-27 01:26:33",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.9100310968714662,
+          "precision_macro": 0.8215024377002869,
+          "recall_macro": 0.9266649424141198,
+          "f1_macro": 0.859239855534752,
+          "f1_weighted": 0.9162997433118861,
+          "mcc": 0.740739681851572,
+          "fpr": 0.04868624420401855,
+          "detection_rate": 0.902016129032258,
+          "confusion_matrix": [
+            [
+              59088,
+              3024
+            ],
+            [
+              31347,
+              288573
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9733355494348941,
+          "precision_macro": 0.7259440369504797,
+          "recall_macro": 0.5443453772748331,
+          "f1_macro": 0.5699197444289545,
+          "f1_weighted": 0.9644438975506301,
+          "mcc": 0.20019563992822484,
+          "fpr": 0.9085782260060172,
+          "detection_rate": 0.9972689805556835,
+          "confusion_matrix": [
+            [
+              21058,
+              209281
+            ],
+            [
+              23180,
+              8464493
+            ]
+          ]
+        }
+      }
+    },
+    "RandomForest|binary|s21|e-": {
+      "model": "RandomForest",
+      "task": "binary",
+      "seed": 21,
+      "epochs": null,
+      "params": null,
+      "train_seconds": 32.0,
+      "timestamp": "2026-10-27 01:27:13",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.9579825773757172,
+          "precision_macro": 0.9009297615142258,
+          "recall_macro": 0.9647212699136917,
+          "f1_macro": 0.9286712362677477,
+          "f1_weighted": 0.9595277488908128,
+          "mcc": 0.8632973715171027,
+          "fpr": 0.025293019062339002,
+          "detection_rate": 0.9547355588897224,
+          "confusion_matrix": [
+            [
+              60541,
+              1571
+            ],
+            [
+              14481,
+              305439
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9738348605163655,
+          "precision_macro": 0.9008454437412845,
+          "recall_macro": 0.5060803795609936,
+          "f1_macro": 0.5054215825065894,
+          "f1_weighted": 0.9613058113868084,
+          "mcc": 0.09873788418316277,
+          "fpr": 0.9877701995754085,
+          "detection_rate": 0.9999309586973957,
+          "confusion_matrix": [
+            [
+              2817,
+              227522
+            ],
+            [
+              586,
+              8487087
+            ]
+          ]
+        }
+      }
+    },
+    "LightGBM|binary|s21|e-": {
+      "model": "LightGBM",
+      "task": "binary",
+      "seed": 21,
+      "epochs": null,
+      "params": null,
+      "train_seconds": 9.4,
+      "timestamp": "2026-10-27 01:27:31",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.958032311429409,
+          "precision_macro": 0.900150971643412,
+          "recall_macro": 0.9670928019872047,
+          "f1_macro": 0.9290394563646268,
+          "f1_weighted": 0.9596485596572469,
+          "mcc": 0.8646563214661044,
+          "fpr": 0.019480937660999485,
+          "detection_rate": 0.9536665416354089,
+          "confusion_matrix": [
+            [
+              60902,
+              1210
+            ],
+            [
+              14823,
+              305097
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9741088908801685,
+          "precision_macro": 0.8587593634946203,
+          "recall_macro": 0.5151815001532559,
+          "f1_macro": 0.5228733590561506,
+          "f1_weighted": 0.9623551317138382,
+          "mcc": 0.147600885253112,
+          "fpr": 0.9693495239625074,
+          "detection_rate": 0.9997125242690194,
+          "confusion_matrix": [
+            [
+              7060,
+              223279
+            ],
+            [
+              2440,
+              8485233
+            ]
+          ]
+        }
+      }
+    },
+    "MLP14k|8class|s21|e4": {
+      "model": "MLP14k",
+      "task": "8class",
+      "seed": 21,
+      "epochs": 4,
+      "params": 14336,
+      "train_seconds": 34.7,
+      "timestamp": "2026-10-27 01:28:28",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.7484503915902333,
+          "precision_macro": 0.6702663803885462,
+          "recall_macro": 0.7354290786652871,
+          "f1_macro": 0.6369372050764293,
+          "f1_weighted": 0.7767232504069101,
+          "mcc": 0.7134564022039499,
+          "fpr_macro": 0.03485012839763892,
+          "confusion_matrix": [
+            [
+              48720,
+              3057,
+              0,
+              2,
+              2,
+              1223,
+              3406,
+              5702
+            ],
+            [
+              215,
+              1610,
+              0,
+              1,
+              0,
+              124,
+              57,
+              663
+            ],
+            [
+              0,
+              1,
+              40637,
+              21741,
+              27,
+              93,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              6906,
+              55330,
+              50,
+              157,
+              4,
+              2
+            ],
+            [
+              1,
+              0,
+              15,
+              39,
+              62253,
+              173,
+              19,
+              0
+            ],
+            [
+              7210,
+              7507,
+              14,
+              64,
+              46,
+              34001,
+              997,
+              12617
+            ],
+            [
+              6383,
+              4263,
+              4,
+              0,
+              1,
+              1402,
+              39510,
+              10859
+            ],
+            [
+              161,
+              615,
+              0,
+              0,
+              0,
+              109,
+              166,
+              3871
+            ]
+          ]
+        }
+      }
+    },
+    "MLP14k|8class|s21|e10": {
+      "model": "MLP14k",
+      "task": "8class",
+      "seed": 21,
+      "epochs": 10,
+      "params": 14336,
+      "train_seconds": 85.0,
+      "timestamp": "2026-10-27 01:29:54",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.763621895548017,
+          "precision_macro": 0.6857417303906603,
+          "recall_macro": 0.7518720587394362,
+          "f1_macro": 0.6491733433542004,
+          "f1_weighted": 0.7914876204479435,
+          "mcc": 0.7316744377053352,
+          "fpr_macro": 0.03262879194284595,
+          "confusion_matrix": [
+            [
+              50067,
+              4050,
+              0,
+              0,
+              0,
+              1850,
+              2563,
+              3582
+            ],
+            [
+              183,
+              1986,
+              0,
+              1,
+              0,
+              86,
+              33,
+              381
+            ],
+            [
+              0,
+              1,
+              39524,
+              22861,
+              27,
+              80,
+              7,
+              0
+            ],
+            [
+              0,
+              1,
+              2822,
+              59443,
+              43,
+              134,
+              5,
+              2
+            ],
+            [
+              2,
+              0,
+              8,
+              45,
+              62280,
+              139,
+              26,
+              0
+            ],
+            [
+              5641,
+              11462,
+              10,
+              68,
+              38,
+              35554,
+              854,
+              8829
+            ],
+            [
+              6616,
+              6999,
+              3,
+              0,
+              3,
+              1431,
+              39517,
+              7853
+            ],
+            [
+              142,
+              1098,
+              0,
+              0,
+              0,
+              154,
+              171,
+              3357
+            ]
+          ]
+        }
+      }
+    },
+    "MLP14k|binary|s42|e4": {
+      "model": "MLP14k",
+      "task": "binary",
+      "seed": 42,
+      "epochs": 4,
+      "params": 14018,
+      "train_seconds": 33.7,
+      "timestamp": "2026-10-27 01:30:28",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.8937471206600495,
+          "precision_macro": 0.8008755280749238,
+          "recall_macro": 0.922540552303841,
+          "f1_macro": 0.8399138554142238,
+          "f1_weighted": 0.902560653916042,
+          "mcc": 0.7131118055606376,
+          "fpr": 0.03479198866563627,
+          "detection_rate": 0.8798730932733183,
+          "confusion_matrix": [
+            [
+              59951,
+              2161
+            ],
+            [
+              38431,
+              281489
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9763315306287718,
+          "precision_macro": 0.816618445853031,
+          "recall_macro": 0.6090206437299979,
+          "f1_macro": 0.6592794548186947,
+          "f1_weighted": 0.9705849956851553,
+          "mcc": 0.3715801220931438,
+          "fpr": 0.7787825769843578,
+          "detection_rate": 0.9968238644443536,
+          "confusion_matrix": [
+            [
+              50955,
+              179384
+            ],
+            [
+              26958,
+              8460715
+            ]
+          ]
+        }
+      }
+    },
+    "KDStudentCNN|binary|s42|e4": {
+      "model": "KDStudentCNN",
+      "task": "binary",
+      "seed": 42,
+      "epochs": 4,
+      "params": 1574,
+      "train_seconds": 49.0,
+      "timestamp": "2026-10-27 01:32:05",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.7900882648573941,
+          "precision_macro": 0.713812115614391,
+          "recall_macro": 0.8632498372854419,
+          "f1_macro": 0.7292144078938045,
+          "f1_weighted": 0.8158556827223529,
+          "mcc": 0.557376770978424,
+          "fpr": 0.02833590932509016,
+          "detection_rate": 0.7548355838959739,
+          "confusion_matrix": [
+            [
+              60352,
+              1760
+            ],
+            [
+              78433,
+              241487
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.976490282417597,
+          "precision_macro": 0.8393571306115251,
+          "recall_macro": 0.5952276172533562,
+          "f1_macro": 0.6451310521031596,
+          "f1_weighted": 0.9699235019646831,
+          "mcc": 0.35953398140410325,
+          "fpr": 0.8073057536934692,
+          "detection_rate": 0.9977609882001816,
+          "confusion_matrix": [
+            [
+              44385,
+              185954
+            ],
+            [
+              19004,
+              8468669
+            ]
+          ]
+        }
+      }
+    },
+    "DLBiLSTM|binary|s42|e4": {
+      "model": "DLBiLSTM",
+      "task": "binary",
+      "seed": 42,
+      "epochs": 4,
+      "params": 11138,
+      "train_seconds": 72.8,
+      "timestamp": "2026-10-27 01:33:27",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.8970740670938561,
+          "precision_macro": 0.8045960396261291,
+          "recall_macro": 0.9208293488074492,
+          "f1_macro": 0.8431877018335745,
+          "f1_weighted": 0.9052211829164222,
+          "mcc": 0.7160529393981758,
+          "fpr": 0.04396895929933024,
+          "detection_rate": 0.8856276569142285,
+          "confusion_matrix": [
+            [
+              59381,
+              2731
+            ],
+            [
+              36590,
+              283330
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9899057262137285,
+          "precision_macro": 0.8864650438990073,
+          "recall_macro": 0.9304248583391397,
+          "f1_macro": 0.9071819967941765,
+          "f1_weighted": 0.9901773070026166,
+          "mcc": 0.815706225974179,
+          "fpr": 0.1323744567789215,
+          "detection_rate": 0.9932241734572008,
+          "confusion_matrix": [
+            [
+              199848,
+              30491
+            ],
+            [
+              57511,
+              8430162
+            ]
+          ]
+        }
+      }
+    },
+    "TinyMLP|binary|s42|e4": {
+      "model": "TinyMLP",
+      "task": "binary",
+      "seed": 42,
+      "epochs": 4,
+      "params": 7298,
+      "train_seconds": 32.8,
+      "timestamp": "2026-10-27 01:34:12",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.8942601666876073,
+          "precision_macro": 0.8014379264812366,
+          "recall_macro": 0.9223279122040943,
+          "f1_macro": 0.8404267911604815,
+          "f1_weighted": 0.9029732091704198,
+          "mcc": 0.71359834683091,
+          "fpr": 0.03607998454404946,
+          "detection_rate": 0.880735808952238,
+          "confusion_matrix": [
+            [
+              59871,
+              2241
+            ],
+            [
+              38155,
+              281765
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9725720726238963,
+          "precision_macro": 0.6969652940790066,
+          "recall_macro": 0.5466859544316676,
+          "f1_macro": 0.5717834167490675,
+          "f1_weighted": 0.9641679139663493,
+          "mcc": 0.19178647234872964,
+          "fpr": 0.9029604192082105,
+          "detection_rate": 0.9963323280715456,
+          "confusion_matrix": [
+            [
+              22352,
+              207987
+            ],
+            [
+              31130,
+              8456543
+            ]
+          ]
+        }
+      }
+    },
+    "MLP14k|binary|s42|e10": {
+      "model": "MLP14k",
+      "task": "binary",
+      "seed": 42,
+      "epochs": 10,
+      "params": 14018,
+      "train_seconds": 82.5,
+      "timestamp": "2026-10-27 01:35:42",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.91300990492943,
+          "precision_macro": 0.8256984546379402,
+          "recall_macro": 0.927872648706999,
+          "f1_macro": 0.8630121667680016,
+          "f1_weighted": 0.91886083543607,
+          "mcc": 0.7466122433116452,
+          "fpr": 0.050103039670273054,
+          "detection_rate": 0.905848337084271,
+          "confusion_matrix": [
+            [
+              59000,
+              3112
+            ],
+            [
+              30121,
+              289799
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.97404477075737,
+          "precision_macro": 0.7979344385530664,
+          "recall_macro": 0.5222252273896073,
+          "f1_macro": 0.5355506523861167,
+          "f1_weighted": 0.9629889721829665,
+          "mcc": 0.16274717378851025,
+          "fpr": 0.9548014014127004,
+          "detection_rate": 0.999251856191915,
+          "confusion_matrix": [
+            [
+              10411,
+              219928
+            ],
+            [
+              6350,
+              8481323
+            ]
+          ]
+        }
+      }
+    },
+    "KDStudentCNN|binary|s42|e10": {
+      "model": "KDStudentCNN",
+      "task": "binary",
+      "seed": 42,
+      "epochs": 10,
+      "params": 1574,
+      "train_seconds": 125.5,
+      "timestamp": "2026-10-27 01:37:55",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.8095997193952339,
+          "precision_macro": 0.7251440198811581,
+          "recall_macro": 0.871707979641742,
+          "f1_macro": 0.7474003035632861,
+          "f1_weighted": 0.8319878080961193,
+          "mcc": 0.5785769741648745,
+          "fpr": 0.036257083977331274,
+          "detection_rate": 0.7796730432608152,
+          "confusion_matrix": [
+            [
+              59860,
+              2252
+            ],
+            [
+              70487,
+              249433
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.975535018763452,
+          "precision_macro": 0.846519260705663,
+          "recall_macro": 0.5606292666974617,
+          "f1_macro": 0.5984533753422846,
+          "f1_weighted": 0.9670132695829057,
+          "mcc": 0.2898910738407163,
+          "fpr": 0.8774241444132344,
+          "detection_rate": 0.9986826778081578,
+          "confusion_matrix": [
+            [
+              28234,
+              202105
+            ],
+            [
+              11181,
+              8476492
+            ]
+          ]
+        }
+      }
+    },
+    "DLBiLSTM|binary|s42|e10": {
+      "model": "DLBiLSTM",
+      "task": "binary",
+      "seed": 42,
+      "epochs": 10,
+      "params": 11138,
+      "train_seconds": 184.8,
+      "timestamp": "2026-10-27 01:41:09",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.9107142857142857,
+          "precision_macro": 0.8224696543692254,
+          "recall_macro": 0.9251916026726928,
+          "f1_macro": 0.859727251061531,
+          "f1_weighted": 0.9167979483764559,
+          "mcc": 0.740571101662927,
+          "fpr": 0.05335522926326636,
+          "detection_rate": 0.9037384346086521,
+          "confusion_matrix": [
+            [
+              58798,
+              3314
+            ],
+            [
+              30796,
+              289124
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9708389940275375,
+          "precision_macro": 0.6283637804081431,
+          "recall_macro": 0.5310977386475991,
+          "f1_macro": 0.5465937240942216,
+          "f1_weighted": 0.9620015340010077,
+          "mcc": 0.12636175521019405,
+          "fpr": 0.9331767525256253,
+          "detection_rate": 0.9953722298208236,
+          "confusion_matrix": [
+            [
+              15392,
+              214947
+            ],
+            [
+              39279,
+              8448394
+            ]
+          ]
+        }
+      }
+    },
+    "TinyMLP|binary|s42|e10": {
+      "model": "TinyMLP",
+      "task": "binary",
+      "seed": 42,
+      "epochs": 10,
+      "params": 7298,
+      "train_seconds": 80.4,
+      "timestamp": "2026-10-27 01:42:42",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.9080626753779788,
+          "precision_macro": 0.8188140635590949,
+          "recall_macro": 0.9271957515557405,
+          "f1_macro": 0.8570564833303969,
+          "f1_weighted": 0.9146787489024566,
+          "mcc": 0.7380948814039214,
+          "fpr": 0.044451957753735186,
+          "detection_rate": 0.8988434608652163,
+          "confusion_matrix": [
+            [
+              59351,
+              2761
+            ],
+            [
+              32362,
+              287558
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9717422962941551,
+          "precision_macro": 0.627567730433045,
+          "recall_macro": 0.520660511170423,
+          "f1_macro": 0.5311675398354134,
+          "f1_weighted": 0.9616356964972284,
+          "mcc": 0.10267647285717289,
+          "fpr": 0.9555871997360412,
+          "detection_rate": 0.9969082220768872,
+          "confusion_matrix": [
+            [
+              10230,
+              220109
+            ],
+            [
+              26242,
+              8461431
+            ]
+          ]
+        }
+      }
+    },
+    "RandomForest|binary|s42|e-": {
+      "model": "RandomForest",
+      "task": "binary",
+      "seed": 42,
+      "epochs": null,
+      "params": null,
+      "train_seconds": 30.2,
+      "timestamp": "2026-10-27 01:43:19",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.958144867445659,
+          "precision_macro": 0.901268991884132,
+          "recall_macro": 0.9648051949714631,
+          "f1_macro": 0.9289200097241757,
+          "f1_weighted": 0.9596771908587921,
+          "mcc": 0.8637404980865641,
+          "fpr": 0.02532521895929933,
+          "detection_rate": 0.9549356089022255,
+          "confusion_matrix": [
+            [
+              60539,
+              1573
+            ],
+            [
+              14417,
+              305503
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9737326583170567,
+          "precision_macro": 0.8880614019006907,
+          "recall_macro": 0.5038337266564569,
+          "f1_macro": 0.5009898978826013,
+          "f1_weighted": 0.9610234433933832,
+          "mcc": 0.07714198184668856,
+          "fpr": 0.9922809424370167,
+          "detection_rate": 0.9999483957499306,
+          "confusion_matrix": [
+            [
+              1778,
+              228561
+            ],
+            [
+              438,
+              8487235
+            ]
+          ]
+        }
+      }
+    },
+    "LightGBM|binary|s42|e-": {
+      "model": "LightGBM",
+      "task": "binary",
+      "seed": 42,
+      "epochs": null,
+      "params": null,
+      "train_seconds": 9.6,
+      "timestamp": "2026-10-27 01:43:38",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.9567627842693806,
+          "precision_macro": 0.8975128314567057,
+          "recall_macro": 0.9665488737427788,
+          "f1_macro": 0.9271198471923536,
+          "f1_weighted": 0.9584860467374037,
+          "mcc": 0.8612993993134539,
+          "fpr": 0.018949639361154045,
+          "detection_rate": 0.9520473868467116,
+          "confusion_matrix": [
+            [
+              60935,
+              1177
+            ],
+            [
+              15341,
+              304579
+            ]
+          ]
+        },
+        "ciciomt2024": {
+          "accuracy": 0.9742614485963085,
+          "precision_macro": 0.8692543991442822,
+          "recall_macro": 0.5185331462623802,
+          "f1_macro": 0.5291110349227001,
+          "f1_weighted": 0.9627567270802287,
+          "mcc": 0.16545024372745196,
+          "fpr": 0.9626203118013016,
+          "detection_rate": 0.999686604326062,
+          "confusion_matrix": [
+            [
+              8610,
+              221729
+            ],
+            [
+              2660,
+              8485013
+            ]
+          ]
+        }
+      }
+    },
+    "MLP14k|8class|s42|e4": {
+      "model": "MLP14k",
+      "task": "8class",
+      "seed": 42,
+      "epochs": 4,
+      "params": 14336,
+      "train_seconds": 34.3,
+      "timestamp": "2026-10-27 01:44:36",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.7602059513339197,
+          "precision_macro": 0.6759282371920405,
+          "recall_macro": 0.7424094384601725,
+          "f1_macro": 0.6459435870892842,
+          "f1_weighted": 0.7873878872632272,
+          "mcc": 0.7262365668871981,
+          "fpr_macro": 0.03319996616268096,
+          "confusion_matrix": [
+            [
+              50551,
+              2416,
+              0,
+              1,
+              0,
+              1113,
+              2719,
+              5312
+            ],
+            [
+              240,
+              1579,
+              0,
+              0,
+              0,
+              116,
+              52,
+              683
+            ],
+            [
+              0,
+              1,
+              45277,
+              17105,
+              32,
+              82,
+              3,
+              0
+            ],
+            [
+              0,
+              1,
+              8212,
+              54033,
+              48,
+              151,
+              4,
+              1
+            ],
+            [
+              2,
+              0,
+              16,
+              39,
+              62257,
+              173,
+              13,
+              0
+            ],
+            [
+              7671,
+              7574,
+              17,
+              68,
+              46,
+              33872,
+              1029,
+              12179
+            ],
+            [
+              7379,
+              4227,
+              6,
+              1,
+              3,
+              1248,
+              39010,
+              10548
+            ],
+            [
+              187,
+              574,
+              0,
+              0,
+              1,
+              124,
+              192,
+              3844
+            ]
+          ]
+        }
+      }
+    },
+    "MLP14k|8class|s42|e10": {
+      "model": "MLP14k",
+      "task": "8class",
+      "seed": 42,
+      "epochs": 10,
+      "params": 14336,
+      "train_seconds": 84.0,
+      "timestamp": "2026-10-27 01:46:01",
+      "evals": {
+        "ciciot2023_balanced": {
+          "accuracy": 0.7635590735854588,
+          "precision_macro": 0.6829705222038318,
+          "recall_macro": 0.7559182038639568,
+          "f1_macro": 0.6501095078774464,
+          "f1_weighted": 0.7918217265736653,
+          "mcc": 0.7309095750210568,
+          "fpr_macro": 0.03263483958403923,
+          "confusion_matrix": [
+            [
+              49607,
+              3482,
+              0,
+              0,
+              0,
+              1468,
+              2832,
+              4723
+            ],
+            [
+              156,
+              1911,
+              0,
+              0,
+              0,
+              81,
+              18,
+              504
+            ],
+            [
+              0,
+              1,
+              41414,
+              20958,
+              33,
+              93,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              4630,
+              57595,
+              50,
+              165,
+              7,
+              1
+            ],
+            [
+              0,
+              0,
+              17,
+              36,
+              62268,
+              167,
+              12,
+              0
+            ],
+            [
+              6170,
+              9438,
+              7,
+              36,
+              39,
+              35278,
+              896,
+              10592
+            ],
+            [
+              6144,
+              5711,
+              6,
+              0,
+              1,
+              1449,
+              39955,
+              9156
+            ],
+            [
+              117,
+              842,
+              0,
+              0,
+              0,
+              135,
+              152,
+              3676
+            ]
+          ]
+        }
+      }
+    }
+  }
+}

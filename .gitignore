@@ -1,0 +1,20 @@
+# Datasets: CICIoT2023 is auto-downloaded by src/data.py; CICIoMT2024 comes
+# from the CIC registration form (see src/run_e2.py). Several GB, never commit.
+data/
+
+# Tree-model pickles are 3-285 MB each; the neural checkpoints (*.pt, <100 KB)
+# are kept so results can be reproduced without retraining.
+*.pkl
+results/checkpoints_sweep/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Presentation working files (not part of the project deliverable)
+research/PRESENTATION_PREP.md
+research/CLAUDE_DESIGN_PROMPT.md
