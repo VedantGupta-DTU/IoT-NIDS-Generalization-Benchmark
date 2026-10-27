@@ -11,11 +11,12 @@ with CICIoT2023 by name).
 
 On the **natural class mix** (72.8% DDoS), binary accuracies land at
 98.6–99.7% — right where the papers claim. The tree baselines also reproduce
-the ~99% 8-class claims (RF 99.26%, LightGBM 99.50%). But the same trained
-models on a **class-balanced test** drop hard: the KD student falls from 98.6%
-to 78.4% binary accuracy. Published accuracy on CICIoT2023 substantially
-measures the DDoS majority, not detection ability; any comparison quoting
-natural-mix accuracy is comparing class priors.
+the ~99% 8-class claims (RF 99.26%, LightGBM 99.50%). But binary natural-mix
+accuracy is only 1-2 points above the 97.6% of a predictor that always says
+"attack", and on a **class-balanced test** the neural models lose 10-20 points
+(KD student 98.6% to 78.4%; the trees lose about 4). Published binary accuracy on
+CICIoT2023 substantially measures the DDoS majority, not detection ability; any
+comparison quoting natural-mix accuracy is comparing class priors.
 
 ## 2. A genuine reproducibility gap for the tiny neural models (8-class)
 
