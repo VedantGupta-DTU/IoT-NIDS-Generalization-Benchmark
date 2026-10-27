@@ -30,6 +30,7 @@ __pycache__/
 # macOS
 .DS_Store
 
-# Presentation working files (not part of the project deliverable)
+# Presentation / evaluation prep files (not part of the project deliverable)
 research/PRESENTATION_PREP.md
 research/CLAUDE_DESIGN_PROMPT.md
+prep/
