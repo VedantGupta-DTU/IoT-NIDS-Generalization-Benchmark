@@ -9,6 +9,19 @@ results/checkpoints/RandomForest_*.pkl
 results/checkpoints_sweep/RandomForest_*.pkl
 release_assets/
 
+# Credentials and local config: never commit
+.env
+.env.*
+*.pem
+*.key
+*.token
+secrets*
+credentials*
+.netrc
+kaggle.json
+hosts.yml
+.claude/
+
 # Python
 __pycache__/
 *.pyc
