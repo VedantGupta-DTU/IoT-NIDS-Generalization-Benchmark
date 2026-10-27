@@ -54,10 +54,12 @@ The short answer is that the published numbers come from an easy test setup, and
 | `src/run_sweep.py` | 36-run sweep over seeds {13, 21, 42} and epochs {4, 10} |
 | `src/synthetic.py` | Per-class Gaussian-copula synthesiser and perturbation functions |
 | `src/make_report.py` | Collects `results/*.json` into `results/RESULTS.md` |
+| `src/fetch_models.py` | Downloads the six Random Forest models from the GitHub release (see [Trained models](#trained-models)) |
 | `results/RESULTS.md` | All result tables |
 | `results/FINDINGS.md` | What the results mean, written up |
 | `results/SWEEP.md` | Mean ± std over seeds and training budgets |
-| `results/checkpoints/*.pt` | Trained neural-network weights (all under 100 KB) |
+| `results/checkpoints/` | Every model from the main experiments (seed 42): neural weights, LightGBM and Random Forest |
+| `results/checkpoints_sweep/` | Every model from the 36-run sweep (seeds 13, 21, 42 × epochs 4, 10) |
 | `research/lightweight-ciciot2023-models-and-datasets.md` | Literature survey: models, datasets, generalisation studies |
 | `research/literature_review.xlsx` | Literature review workbook (24 papers and datasets, one row each) |
 
@@ -94,7 +96,21 @@ python3 run_sweep.py         # ~2 hours
 python3 make_report.py       # writes results/RESULTS.md
 ```
 
-Everything is seeded (42 by default). With the committed checkpoints, `run_e1.py` skips training and only evaluates, which takes about two minutes.
+Everything is seeded (42 by default). With the trained models in place (see below), `run_e1.py` skips training and only evaluates, which takes about two minutes.
+
+## Trained models
+
+Every model whose numbers appear in the results is in the repository, so the tables can be re-checked without retraining:
+
+| Files | What they are | Where |
+|---|---|---|
+| `results/checkpoints/{MLP14k,KDStudentCNN,KDTeacherCNN,DLBiLSTM,TinyMLP}_{8class,binary,binary44}.pt` | Neural weights, seed 42, for the 8-class, binary and 44-feature-ablation tasks | committed |
+| `results/checkpoints/LightGBM_{8class,binary,binary44}.pkl` | LightGBM, seed 42 | committed |
+| `results/checkpoints/RandomForest_{8class,binary,binary44}.pkl` | Random Forest, seed 42 (96–272 MB each) | release `models-v1`; run `python3 src/fetch_models.py` |
+| `results/checkpoints_sweep/*_s{13,21,42}_e{4,10}.pt`, `LightGBM_binary_s*.pkl` | All sweep models, 3 seeds × 2 epoch budgets | committed |
+| `results/checkpoints_sweep/RandomForest_binary_s{13,21,42}.pkl` | Sweep Random Forests (~96 MB each) | release `models-v1`; same script |
+
+Loading them: the `.pt` files are PyTorch `state_dict`s for the classes in `src/models.py` (`build(name, in_dim, n_classes)` with `in_dim` 46, or 44 for the `binary44` ablation). The `.pkl` files are plain pickles of scikit-learn 1.5.1 / LightGBM 4.6.0 estimators saved under Python 3.12.
 
 ## Evaluation method (important)
 

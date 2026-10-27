@@ -2,10 +2,12 @@
 # from the CIC registration form (see src/run_e2.py). Several GB, never commit.
 data/
 
-# Tree-model pickles are 3-285 MB each; the neural checkpoints (*.pt, <100 KB)
-# are kept so results can be reproduced without retraining.
-*.pkl
-results/checkpoints_sweep/
+# All trained models are in the repo except the RandomForest pickles
+# (96-272 MB each, over GitHub's 100 MB file limit). Those are published as
+# gzip-compressed release assets; src/fetch_models.py downloads them.
+results/checkpoints/RandomForest_*.pkl
+results/checkpoints_sweep/RandomForest_*.pkl
+release_assets/
 
 # Python
 __pycache__/
